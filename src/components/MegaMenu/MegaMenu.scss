@@ -1,0 +1,128 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.main-menu-block {
+  position: relative;
+  .main-category-block {
+    position: relative;
+    width: 300px;
+    min-height: 320px;
+    @include tablet-lg {
+      min-height: unset;
+      position: relative;
+      width: 100%;
+    }
+    top: 0px;
+    left: 0px;
+    background-color: #3e8080;
+    padding: 15px;
+    ul {
+      margin: 0px;
+      padding: 0px;
+      li {
+        border-bottom: 1px solid transparent;
+        padding: 10px 0;
+        font-size: 14px;
+        width: 100%;
+        .sub-category-block {
+          display: none;
+        }
+        &:hover {
+          padding: 10px 0;
+          width: 100%;
+          border-bottom: 1px solid #fff;
+          background-image: url(../../assets/images/ic-right-arrow.svg);
+          background-repeat: no-repeat;
+          padding-right: 35px;
+          transition: none !important;
+          @include tablet-lg {
+            padding-right: 0px;
+            background-image: url(../../assets/images/ic-down-arrow.svg);
+          }
+          background-position: right 15px top 15px;
+
+          .sub-category-block {
+            position: absolute;
+            width: 300px;
+            min-height: auto;
+            top: 0px;
+            left: 280px;
+            padding-left: 20px;
+            height: 100%;
+            @include tablet-lg {
+              min-height: unset;
+              position: relative;
+              width: 100%;
+              left: 0;
+              margin-top: 20px;
+            }
+            background-color: #fff;
+            padding: 15px;
+            display: block;
+            ul {
+              margin: 0px;
+              padding: 0px;
+              li {
+                a {
+                  color: $text-green;
+                  text-decoration: none;
+                }
+              }
+            }
+            h4 {
+              font-family: $font600;
+              color: $text-green;
+              font-size: 18px;
+            }
+          }
+        }
+        a {
+          color: $text-white;
+          text-decoration: none;
+          font-family: $font300;
+          width: 100%;
+          cursor: pointer;
+        }
+
+        .active-menu {
+          padding: 10px 0;
+          width: 100%;
+          border-bottom: 1px solid #fff;
+          background-image: url(../../assets/images/ic-right-arrow.svg);
+          background-repeat: no-repeat;
+          padding-right: 35px;
+          @include tablet-lg {
+            padding-right: 0px;
+          }
+          background-position: right 0px top 15px;
+          .sub-category-block {
+            display: block !important;
+            ul {
+              margin: 0px;
+              padding: 0px;
+              li {
+                a {
+                  color: $text-green;
+                  text-decoration: none;
+                }
+              }
+            }
+            h4 {
+              font-family: $font600;
+              color: $text-green;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+    .no-arrow{
+      border-bottom: 0 !important;
+      background-image:none !important
+    }
+    h4 {
+      font-family: $font600;
+      font-size: 18px;
+      color: $text-white;
+    }
+  }
+}

@@ -1,0 +1,219 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./fonts.css";
+@import "./bootstrap.css";
+
+* {
+	padding: 0;
+	margin: 0;
+	// list-style-type: none;
+	font-family: $fontRegular;
+}
+button {
+	&:focus {
+		box-shadow: none !important;
+		outline: none;
+	}
+}
+.list-none {
+}
+body {
+	padding-top: 66px;
+	@media (max-width: 991px) {
+		padding-top: 64px !important;
+	}
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+	color: inherit !important;
+	background: transparent !important;
+}
+.dropdown-item:focus {
+	color: inherit !important;
+	background: transparent !important;
+}
+p {
+	text-align: left;
+	@media (max-width: 576px) {
+		// font-size: 14px !important;
+	}
+}
+.superSmallText {
+	font-size: $super-small-font;
+}
+.smallText {
+	font-size: $small-font;
+}
+.midText {
+	font-size: $midium-font;
+}
+.largeText {
+	font-size: $large-font;
+}
+.textPrimaryColor {
+	color: $auth-primary-color;
+}
+.textGrayColor {
+	color: $gray-color;
+}
+.textBlackColor {
+	color: $black-text-color;
+}
+.pWithMargin {
+	margin: 10px 5px;
+}
+.rightAlignText {
+	text-align: right;
+}
+.leftAlignText {
+	text-align: left;
+}
+.cursorPointer {
+	cursor: pointer;
+}
+.linkDecoreRemove {
+	text-decoration: none;
+}
+.h1WithoutTopMargin {
+	margin-top: 0px;
+}
+.boldText {
+	font-weight: 600;
+}
+.visibilityHidden {
+	visibility: hidden;
+}
+.starIcon {
+	color: #f9c32c;
+}
+.f-18 {
+	font-size: 18px;
+}
+.f-16 {
+	font-size: 16px !important;
+}
+.f-12 {
+	font-size: 12px !important;
+}
+/* page banner css for mobile */
+.popupheading h2 {
+	color: $black-text-color;
+}
+@media (max-width: 991px) {
+	.navbar-toggler-icon {
+		margin-top: -12px;
+	}
+}
+@media (max-width: 576px) {
+	body {
+		padding-top: 74px;
+	}
+	.banner-img {
+		position: relative;
+		&::before {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #3e8181a3;
+			content: "";
+		}
+		.pagename {
+			z-index: 99;
+			text-align: center;
+			h1 {
+				color: $text-white !important;
+			}
+			a {
+				color: $text-white !important;
+			}
+		}
+	}
+	.popupheading {
+		h2 {
+			font-size: 18px !important;
+		}
+	}
+	.apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center {
+		justify-content: flex-start !important;
+	}
+}
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.unset-list {
+	font-size: 14px;
+	font-family: $font300;
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		li {
+			font-size: 18px;
+			color: $black-text-color;
+			font-family: $font300;
+			position: relative;
+			padding-left: 15px;
+			@include mobile {
+				font-size: 14px;
+			}
+		}
+		::before {
+			position: absolute;
+			content: "";
+			width: 6px;
+			height: 6px;
+			background-color: $black-text-color;
+			border-radius: 5px;
+			left: 0px;
+			top: 10px;
+		}
+	}
+}
+
+//change default scrollbar
+
+::-webkit-scrollbar {
+	display: none;
+	height: 12px;
+	width: 10px;
+	border-radius: 5px;
+	background: #aaa;
+}
+::-webkit-scrollbar-button {
+	width: 4px;
+	height: 4px;
+}
+::-webkit-scrollbar-thumb {
+	background: #393812;
+	-webkit-border-radius: 1ex;
+	-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #3e3e3e;
+}
+::-webkit-scrollbar-track:hover {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb:active {
+	background: transparent;
+}
+::-webkit-scrollbar-track:active {
+	background: transparent;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+	border: 0px none transparent;
+	border-radius: 0px;
+}
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+#CookiebotWidget{
+	display: block;
+	@include laptop{
+		display: none;
+	}
+}

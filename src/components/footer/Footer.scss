@@ -1,0 +1,83 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.footer-main {
+	background-color: $footer-bg-color;
+	padding: 20px 0;
+	padding-top: 50px;
+	.quick-links-title {
+		margin-top: 35px;
+	}
+	ul {
+		margin: 0;
+		margin-top: 20px;
+		padding: 0;
+		li {
+			position: relative;
+			padding-left: 15px;
+			::before {
+				background-color: aliceblue;
+				content: "";
+				position: absolute;
+				left: 0px;
+				top: 8px;
+				width: 8px;
+				height: 8px;
+				border-radius: 5px;
+			}
+			a {
+				color: $text-white;
+				font-family: $fontRegular;
+				text-decoration: none;
+			}
+		}
+	}
+	p {
+		color: $text-white !important;
+		font-family: $fontRegular !important;
+		font-size: 14px !important;
+		max-width: 418px !important;
+		@include tablet {
+			max-width: 100% !important;
+		}
+		text-align: left !important;
+	}
+	h4 {
+		color: $text-white;
+		font-size: 18px;
+		font-family: $font600;
+	}
+	.socialize-icons {
+		h6 {
+			color: $text-white;
+			font-size: 14px;
+			font-family: $font600;
+		}
+		a {
+			margin-right: 10px;
+		}
+		.cp-text {
+			font-size: 14px;
+			font-family: $fontRegular;
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
+.footer-blcok {
+	background-color: $bg-white;
+	padding: 70px 0px;
+	margin-top: 30px;
+	@include tablet-lg {
+		background-color: transparent;
+	}
+	@media screen and (max-width: 768px) {
+		display: none !important;
+	}
+	.smallFooter {
+		text-align: center;
+		padding: 0 30px;
+		font-size: 20px;
+		font-family: $font600;
+	}
+}

@@ -1,0 +1,34 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.selectbox-main {
+  margin-bottom: 20px;
+  .PhoneInput {
+    display: flex;
+    align-items: center;
+    background: white;
+    height: 50px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    padding: 0 10px;
+
+    background-color: #fff;
+
+    border: 1px solid #ced4da;
+  }
+  .PhoneInputInput {
+    border: none;
+  }
+  .PhoneInputInput.PhoneInput--focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  input {
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}

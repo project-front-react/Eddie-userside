@@ -1,0 +1,106 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.InstructorPanel-main {
+  margin-bottom: 20px;
+  .instructor-image {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    border-radius: 80px;
+    @include mobile {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      border-radius: 40px;
+    }
+    @include justify-align(center, center);
+    text-align: center;
+    margin-right: 20px;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      width: 100%;
+      min-height: 80px;
+      @include mobile {
+        min-height: 40px;
+      }
+    }
+  }
+  .instructor-row {
+    @include flex-align(center);
+  }
+  .instructor-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    h3 {
+      font-family: $font300;
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+    .email {
+      padding-top: 12px;
+    }
+    span {
+      font-size: 14px;
+      font-family: $font300;
+    }
+  }
+
+  .instructor-rate-block {
+    min-width: 100px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    .course-rate {
+      margin-top: 10px;
+      font-size: 10px;
+      @include mobile {
+        margin-top: 5px;
+      }
+    }
+  }
+  .instructor-about {
+    p {
+      font-size: 18px;
+      text-align: left;
+      margin-top: 10px;
+    }
+  }
+}
+.type2 {
+  .instructor-rate-block {
+    min-width: unset;
+  }
+  .instructor-image {
+    min-width: 40px;
+    min-height: 40px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    img {
+      min-height: 40px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  .instructor-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    h3 {
+      font-family: $font300;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+    span {
+      font-size: 10px;
+      font-family: $font300;
+      margin-top: 0px;
+      display: block;
+      text-align: left;
+    }
+  }
+}

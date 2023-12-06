@@ -1,0 +1,28 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.no-data-content{
+    .no-data-title{
+
+    }
+    .no-data-text{
+        display: flex;
+        justify-content: center;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+      .btn-green {
+        background-color: $btn-green;
+        color: $text-white;
+        min-width: 200px;
+        height: 54px;
+        line-height: 42px;
+        border: unset;
+        border-radius: 10px;      
+        
+        &:hover {
+          background-color: #fff;
+          color: $btn-green;
+        }
+      }
+}

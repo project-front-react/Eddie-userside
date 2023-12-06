@@ -1,0 +1,270 @@
+@mixin mobile {
+  @media (max-width: 576px) {
+    transition: 0.5s;
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 767px) {
+    transition: 0.5s;
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (max-width: 991px) {
+    
+    transition: 0.5s;
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1280px) {
+    transition: 0.5s;
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1500px) {
+    transition: 0.5s;
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media (max-width: 1800px) {
+    transition: 0.5s;
+    @content;
+  }
+}
+
+/* Media Query for Max-width */
+@mixin max-width($media-width) {
+  @media all and (max-width: #{$media-width}px) {
+    transition: 0.5s;
+    @content;
+  }
+}
+
+/* Media Query for Min-width */
+@mixin min-width($media-width) {
+  @media all and (min-width: #{$media-width}px) {
+    transition: 0.5s;
+    @content;
+  }
+}
+
+/* Media Query for Min & Max Width */
+@mixin minmax-width($media-width-min, $media-width-max) {
+  @media all and (min-width: #{$media-width-min}px) and (max-width: #{$media-width-max}px) {
+    transition: 0.5s;
+    @content;
+  }
+}
+
+/* Media Query for Max Height */
+@mixin max-height($media-height-max) {
+  @media all and (max-height: #{$media-height-max}px) {
+    transition: 0.5s;
+    @content;
+  }
+}
+
+/* Media Query for Min Height */
+@mixin min-height($media-height-min) {
+  @media all and (min-height: #{$media-height-min}px) {
+    transition: 0.5s;
+    @content;
+  }
+}
+
+/*======= Flex Functions and Prefix Start */
+
+@mixin flex() {
+  display: flex;
+}
+
+@mixin flex-value($value) {
+  flex: $value;
+}
+/* Flex - Justify , Align */
+@mixin justify-align($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/*  Flex Justify */
+@mixin flex-justify($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+@mixin flex-justify-direction($justify, $direction) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+@mixin flex-align-direction($align, $direction) {
+  display: flex;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+/*  Flex - Align */
+@mixin flex-align($align) {
+  display: flex;
+  align-items: $align;
+}
+
+/* Flex Direction */
+
+@mixin flex-direction($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin justify-align-direction($justify, $align, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+/*======= Flex Functions and Prefix End */
+
+/*======= Position Property Start */
+/* Position Absolute Center */
+@mixin position-center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Position Zero */
+@mixin position-zero() {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@mixin position($name, $hor, $horvalue, $ver, $vervalue) {
+  position: $name;
+  #{$hor}: $horvalue;
+  #{$ver}: $vervalue;
+}
+
+@mixin position-transform(
+  $name,
+  $hor,
+  $horvalue,
+  $ver,
+  $vervalue,
+  $transformValue
+) {
+  position: $name;
+  #{$hor}: $horvalue;
+  #{$ver}: $vervalue;
+  transform: $transformValue;
+}
+/*======= Position Property End */
+
+/*  Custom Overlay */
+@mixin overlay($color, $opacity) {
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $color;
+    opacity: $opacity;
+    z-index: 1;
+  }
+}
+
+/*  Transition */
+@mixin transition($value) {
+  transition: $value;
+}
+
+/*  ::before */
+@mixin before() {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  @content;
+}
+
+@mixin slick-dots($color: #0f2660) {
+  .slick-dots {
+    li {
+      width: auto;
+      margin: 0;
+    }
+    .slick-active {
+      button {
+        background-color: $color;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        border: none;
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+        @include media-width-min(575) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    button {
+      border: 2px solid $color;
+      border-radius: 50%;
+      width: 2px;
+      height: 2px;
+      opacity: 1;
+      -webkit-transform: scale(0.4);
+      -ms-transform: scale(0.4);
+      transform: scale(0.4);
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+// List view For List Page
+@mixin list-view {
+  display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(300px, 370px));
+  // justify-content: space-around;
+  grid-template: repeat(4, auto) / repeat(4, 1fr);
+
+  @include media-width-max(1520) {
+    grid-template: repeat(3, auto) / repeat(3, 1fr);
+  }
+  @include media-width-max(1125) {
+    grid-template: repeat(2, auto) / repeat(2, 1fr);
+  }
+  @include media-width-max(758) {
+    grid-template: repeat(1, auto) / repeat(1, 1fr);
+  }
+}
+
+// mobile main background
+
+@mixin main-bg {
+  background-image: $app-main-bg;
+  background-position: center top;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #fbfcfc;
+}

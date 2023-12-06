@@ -1,0 +1,409 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.EventDetails {
+  margin-top: 66px;
+  @include tablet-lg {
+    margin-top: 0px;
+  }
+  .main-content {
+    min-height: 780px;
+    background-color: rgba($color: $bg-offwhite, $alpha: 0.8);
+    margin-left: 200px;
+    @include tablet-lg {
+      margin-left: 0;
+      padding-bottom: 58px;
+    }
+    .brdcumb-block {
+      @include flex-justify(space-between);
+    }
+    .brd-link {
+      color: $black-text-color;
+      text-decoration: none;
+      font-size: 18px;
+      @include tablet-lg {
+        font-size: 14px;
+      }
+    }
+    .text-green {
+      color: $text-green;
+      @include tablet-lg {
+        font-size: 14px;
+      }
+    }
+  }
+  .right-content {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 0px;
+    @include tablet-lg {
+      padding-left: 0px;
+    }
+  }
+  .course-details-main {
+    .course-banner {
+      border-radius: 10px;
+      overflow: hidden;
+      max-height: 400px;
+      .banner-box-big2 {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        // object-position: center center;
+        @include tablet-lg {
+          height: 350px;
+        }
+        @include tablet {
+          height: 250px;
+        }
+      }
+    }
+    .about-course {
+      margin-top: 30px;
+      border-radius: 10px;
+      background-color: $bg-white;
+      padding: 30px;
+
+      @include tablet {
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 30px;
+        font-family: $fontRegular;
+        color: $black-text-color;
+        @include tablet {
+          font-size: 22px;
+        }
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+      p {
+        color: $black-text-color;
+        font-size: 18px;
+        font-family: $font300;
+        text-align: left;
+      }
+      .link-readmore {
+        color: #481a20;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .read-or-hide {
+        cursor: pointer;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        @include mobile {
+          margin-bottom: 20px;
+        }
+        li {
+          font-size: 18px;
+          color: $black-text-color;
+          font-family: $font300;
+          position: relative;
+          padding-left: 15px;
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+        ::before {
+          position: absolute;
+          content: "";
+          width: 6px;
+          height: 6px;
+          background-color: $black-text-color;
+          border-radius: 6px;
+          left: 0px;
+          top: 10px;
+        }
+      }
+    }
+  }
+  .course-information {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 400px;
+    justify-content: space-between;
+    @include tablet-lg {
+      min-height: unset;
+      margin-bottom: 20px;
+    }
+
+    .course-favorite {
+      position: relative;
+      #topping {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 25px;
+        width: 25px;
+        cursor: pointer;
+        appearance: none;
+      }
+    }
+    h1 {
+      font-size: 30px;
+      font-family: $font600;
+      @include tablet {
+        font-size: 22px;
+      }
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+    p {
+      font-size: 14px;
+      font-family: $font300;
+      ul {
+        padding: 0;
+        margin: 0;
+        @include mobile {
+          margin-bottom: 20px;
+        }
+        li {
+          font-size: 18px;
+          color: $black-text-color;
+          font-family: $font300;
+          position: relative;
+          padding-left: 15px;
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+        ::before {
+          position: absolute;
+          content: "";
+          width: 6px;
+          height: 6px;
+          background-color: $black-text-color;
+          border-radius: 6px;
+          left: 0px;
+          top: 10px;
+        }
+      }
+    }
+    span {
+      text-align: left;
+      margin-top: 7px;
+    }
+    .hstag {
+      font-size: 18px;
+      font-family: $font300;
+    }
+    .category-type-block {
+      @include justify-align(space-between, center);
+      width: 100%;
+      @media screen and (max-width: 400px) {
+        display: unset;
+      }
+      .business-category {
+        border-radius: 5px;
+        border: 1px solid #481a20;
+        padding: 5px 50px;
+        font-size: 14px;
+      }
+      .lect-status {
+        font-size: 18px;
+        font-family: $font300;
+        color: $black-text-color;
+        @media screen and (max-width: 400px) {
+          margin-top: 10px;
+        }
+        @include tablet {
+          font-size: 14px;
+        }
+      }
+    }
+    .event-location {
+      font-size: 14px;
+    }
+  }
+  .course-amount-time {
+    margin-top: 25px;
+    border-radius: 10px;
+    background-color: $bg-white;
+    padding: 30px;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        display: flex;
+        margin-bottom: 20px;
+        .item-icon {
+          margin-right: 15px;
+          img {
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+  .item-detail {
+    font-size: 18px;
+    font-family: $font300;
+    dd {
+      font-family: $font300;
+      font-size: 12px;
+      span {
+        color: $text-green;
+        font-family: $font600;
+      }
+    }
+  }
+  .advertisement-blcok {
+    margin-top: 30px;
+    .add-block {
+      height: 370px;
+    }
+  }
+  .btn {
+    border-radius: 10px;
+  }
+  .btn-green {
+    background-color: $btn-green;
+    color: #fff;
+    font-size: 18px;
+    height: 57px;
+    line-height: 42px;
+    text-transform: capitalize !important;
+    &:hover {
+      background-color: $bg-white;
+      color: $text-green;
+    }
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .popupinfo {
+    width: 100%;
+    p {
+      font-family: $fontRegular;
+      text-align: center;
+      font-size: 17px;
+    }
+    h2 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 36px;
+      /* identical to box height */
+      text-align: center;
+      color: #000000;
+    }
+    .course-thumbnail-popup {
+      @include tablet {
+        margin-right: 20px;
+        max-width: 105px !important;
+      }
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+      @include tablet {
+        max-width: 100% !important;
+        margin-bottom: 15px;
+      }
+    }
+    .course-amt {
+      min-width: 150px;
+      p {
+        text-align: end;
+      }
+      .vat-charge-text {
+        font-size: 12px;
+      }
+    }
+    .course-infopopup {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      @include tablet {
+        padding: 0 !important;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .popupheading {
+    display: flex;
+    justify-content: flex-start !important;
+    h2 {
+      text-align: left !important;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  .popupSection {
+    max-width: 615px;
+    padding: 20px !important;
+    width: 90%;
+    margin: 0 1%;
+    .popupcontent {
+      align-items: center !important;
+    }
+    .business-category {
+      border-radius: 5px;
+      border: 1px solid #481a20;
+      padding: 5px 50px;
+      font-size: 14px;
+    }
+    .course-thumbnail {
+      max-width: 200px;
+      height: 105px;
+      margin-right: 20px;
+      @include tablet {
+        max-width: 100%;
+        height: 130px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+      }
+      flex: 1;
+      display: flex;
+      position: relative;
+      @include tablet {
+        display: flex;
+      }
+      @include mobile {
+        height: 180px;
+        width: 100%;
+      }
+    }
+  }
+}
+.course-thumbnail-img {
+  width: 100%;
+  height: 100px;
+  @include tablet {
+    height: 150px;
+  }
+  border-radius: 5px;
+}
+
+.ViewCourseDetails {
+  .related-course {
+    margin-top: 26px;
+  }
+}
+
+.about-news{
+  border-radius: 10px;
+  padding: 30px;
+  background-color: $bg-white;
+  @include tablet-lg{
+    padding: 15px;
+  }
+  @include mobile{
+    padding: 10px;
+  }
+  .main-head{
+    color: $bg-black;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+}

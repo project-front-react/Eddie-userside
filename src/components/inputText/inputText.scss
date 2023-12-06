@@ -1,0 +1,12 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.input-main {
+  margin-bottom: 20px;
+  .form-control {
+    height: 52px;
+  }
+  .form-control[List]::-webkit-calendar-picker-indicator {
+    display:none !important;
+  }
+}

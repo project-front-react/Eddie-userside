@@ -1,0 +1,668 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.UserDashboard {
+  padding-top: 66px;
+  overflow-x: hidden;
+
+  @include tablet-lg {
+    padding-top: 20px;
+  }
+
+  .course-main {
+    .section-title {
+      h1 {
+        font-family: $fontRegular;
+        margin-bottom: 0px;
+
+        @include tablet-lg {
+          font-size: 22px;
+        }
+
+        @include tablet {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  .new-course-based {
+    margin-top: 50px;
+  }
+
+  .main-content {
+    min-height: 780px;
+    background-color: rgba($color: $bg-offwhite, $alpha: 0.8);
+    margin-left: 200px;
+
+    @include tablet-lg {
+      margin-left: 0;
+      padding-bottom: 58px;
+    }
+  }
+
+  .right-content {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include tablet-lg {
+      padding-left: 0px;
+    }
+
+    .shwing-course {
+      .slick-prev {
+        z-index: 111;
+        left: -30px;
+      }
+
+      .slick-next {
+        z-index: 111;
+        right: -21px;
+      }
+    }
+  }
+
+  .courses-section {
+    padding: 30px 0;
+    .course-categories {
+      margin-bottom: 1rem !important;
+      display: flex !important;
+      //   flex-direction: column !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      @include mobile {
+        display: unset !important;
+        padding-left: 14px;
+      }
+      h2 {
+        color: $black-text-color;
+
+        @include mobile {
+          font-size: 22px !important;
+          padding-left: 20px;
+        }
+      }
+      a {
+        @include mobile {
+          padding-left: 15px;
+        }
+      }
+    }
+    .view-all-course {
+      align-self: center;
+      color: $btn-green;
+      border-radius: 5px;
+      text-decoration: none;
+      min-width: 150px;
+    }
+    .btn-green {
+      align-self: center;
+      background-color: $btn-green;
+      color: $bg-white;
+      border-radius: 5px;
+      text-decoration: none;
+      padding: 7px 28px;
+      border: 1px solid $btn-green;
+      min-width: 150px;
+
+      &:hover {
+        background-color: $bg-white;
+        color: $text-green;
+      }
+
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+    .course-category {
+      background: $bg-white;
+      border-radius: 5px;
+      padding: 36px 130px 36px 130px;
+      @include laptop {
+        padding: 35px 30px 35px 30px;
+      }
+      @include tablet-lg {
+        padding: 25px 30px 25px 30px;
+      }
+      .course-category-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(2, 1fr);
+          max-width: 500px;
+        }
+        @media (max-width: 576px) {
+          display: flex;
+          overflow: auto;
+          width: 100%;
+          max-width: unset;
+        }
+        .card-wrap {
+          max-width: 250px;
+          width: 100%;
+          @media (max-width: 576px) {
+            min-width: 250px;
+            width: 100%;
+          }
+          @media (max-width: 425px) {
+            min-width: 200px;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    h2 {
+      color: $black-text-color;
+
+      @include mobile {
+        font-size: 22px !important;
+      }
+    }
+
+    .course-box {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 270px;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 25px;
+      @include minmax-width(1150, 1600) {
+        width: 244px;
+      }
+      span {
+        position: absolute;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.4;
+      }
+      .course-block {
+        padding: 15px;
+        z-index: 999;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+
+        h1 {
+          color: $text-white;
+          font-family: $fontRegular;
+          font-size: 24px;
+        }
+        p {
+          color: $text-white;
+          font-family: $fontRegular;
+          font-size: 12px;
+          text-align: center;
+        }
+
+        .btn-white-border {
+          background-color: transparent;
+          color: $text-white;
+          min-width: 100%;
+          height: 54px;
+          line-height: 42px;
+          font-size: 18px;
+          border: 1px solid $text-white;
+
+          &:hover {
+            background-color: #fff;
+            color: $black-text-color;
+          }
+        }
+
+        .f-30 {
+          font-size: 30px;
+          font-weight: 400;
+        }
+        .btn-view {
+          border: 1px solid #ffffff;
+          border-radius: 5px;
+          padding: 12px 20px;
+          background-color: transparent;
+          color: $text-white;
+          width: 100%;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+
+          &:hover {
+            background-color: #fff;
+            color: $black-text-color;
+          }
+        }
+      }
+    }
+  }
+
+  .whatson {
+    background-color: $bg-white;
+    border-radius: 5px;
+    padding: 30px;
+    min-height: 480px;
+    margin-bottom: 50px;
+    height: 95%;
+    .read-more-less {
+      color: $btn-green;
+    }
+
+    @include tablet-lg {
+      min-height: unset;
+      margin-bottom: 15px;
+      padding: 15px;
+    }
+
+    h2 {
+      text-align: left;
+      font-family: $fontRegular;
+      font-size: 32px;
+
+      @include tablet {
+        font-size: 22px;
+      }
+
+      @include mobile {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      font-family: $font300;
+
+      @include tablet {
+        font-size: 16px;
+        text-align: left;
+      }
+
+      @include mobile {
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+  }
+
+  .newsArticle {
+    background-color: $bg-white;
+    border-radius: 5px;
+    padding: 30px;
+    min-height: 450px;
+    height: 95%;
+
+    @include tablet-lg {
+      height: 100%;
+    }
+
+    @include tablet {
+      padding: 15px;
+      margin-bottom: 15px;
+      min-height: unset;
+    }
+
+    @include mobile {
+      min-height: unset;
+    }
+
+    h2 {
+      text-align: left;
+      font-family: $fontRegular;
+      font-size: 32px;
+      color: $black-text-color;
+
+      @include tablet {
+        font-size: 22px;
+      }
+
+      @include mobile {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      font-family: $font300;
+      color: $text-white;
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    ul {
+      margin: 0px;
+      padding: 0px;
+
+      li {
+        padding: 10px;
+        background-color: $bg-white;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        display: flex;
+
+        @include laptop {
+          margin-bottom: 10px;
+          flex-direction: column;
+        }
+
+        .dashboardEvent-img {
+          max-width: 125px;
+          width: 100%;
+          height: 88px;
+          border-radius: 5px;
+          margin-right: 10px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+
+          @include laptop {
+            margin-bottom: 10px;
+          }
+
+          @include tablet-lg {
+            min-width: 100%;
+            flex: unset;
+            height: 260px;
+            margin-right: unset;
+            margin-bottom: 10px;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        .dashboardEvent-information {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+
+          h2 {
+            font-size: 18px;
+            font-family: $fontRegular;
+            margin-bottom: 0px;
+          }
+
+          p {
+            color: $black-text-color;
+            font-size: 16px;
+            margin-bottom: 0px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+          }
+
+          h6 {
+            margin-bottom: 0px;
+            font-size: 16px;
+            font-family: $font300;
+          }
+        }
+
+        .action-box {
+          // display: flex;
+          // flex: 1 1;
+          // max-width: 110px;
+          // min-width: 110px;
+          // align-items: flex-end;
+          // margin-left: 15px;
+          flex: 1 1;
+          min-width: 120px;
+          max-width: 120px;
+          justify-content: space-between;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+
+          .btn-green {
+            background-color: $btn-green;
+            color: #fff;
+            min-width: 100%;
+            height: 34px;
+            line-height: 22px;
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .link-green {
+      text-decoration: none;
+      text-align: right;
+      color: $text-green;
+    }
+  }
+
+  .quickButton {
+    background-color: $bg-white;
+    border-radius: 5px;
+
+    @include tablet-lg {
+      min-height: 120px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      font-family: $font300;
+      text-decoration: none;
+      text-align: center;
+      padding: 15px;
+      color: $black-text-color;
+      @include justify-align(center, center);
+      flex-direction: column;
+
+      .bx-icon {
+        height: 50px;
+
+        @include tablet {
+          height: 40px;
+
+          img {
+            height: 30px;
+          }
+        }
+      }
+
+      span {
+        margin-top: 5px;
+        font-size: 18px;
+
+        @include tablet {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: $bg-green;
+      transition: 0.2s;
+
+      a {
+        color: $text-white;
+      }
+
+      img {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+          brightness(102%) contrast(400%);
+      }
+    }
+  }
+
+  .discover-section {
+    width: 100%;
+    background-color: $bg-white;
+    border-radius: 5px;
+    padding: 30px;
+
+    @include tablet {
+      padding: 15px;
+    }
+
+    position: relative;
+
+    h2 {
+      font-size: 30px;
+      font-family: $font600;
+      color: $text-green;
+
+      @include tablet {
+        font-size: 22px;
+      }
+
+      @include mobile {
+        font-size: 22px;
+      }
+
+      span {
+        color: $black-text-color;
+      }
+    }
+
+    h5 {
+      font-size: 16px;
+      font-family: $font300;
+    }
+
+    .dis-img {
+      position: absolute;
+      bottom: -35px;
+      right: 0;
+
+      @include tablet-lg {
+        display: none;
+      }
+    }
+
+    .search-block {
+      max-width: 560px;
+      width: 100%;
+      margin-top: 10px;
+      position: relative;
+
+      .form-control {
+        font-size: 16px;
+        font-family: $font300;
+        padding-right: 40px;
+      }
+
+      span {
+        position: absolute;
+        right: 25px;
+        top: 35px;
+      }
+    }
+  }
+
+  .cta-section {
+    border-radius: 5px;
+  }
+
+  .slick-list {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+
+.shwing-course {
+  .slick-list,
+  .slick-slider,
+  .slick-track {
+    display: block;
+    position: relative;
+    left: 0;
+  }
+}
+
+// for new corporate user dashboard
+
+.main-img-dash {
+  .back-img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
+  }
+
+  .desc-comp {
+    background: $bg-white;
+    border-radius: 0px 0px 5px 5px;
+    padding-top: 70px;
+
+    .read-more-less {
+      color: $btn-green;
+    }
+  }
+
+  .company-logo {
+    position: absolute;
+    width: 215px;
+    height: 106.76px;
+    left: 50px;
+    object-fit: contain;
+    // top: 37%;
+    padding: 15px;
+    bottom: -25%;
+    background: $bg-white;
+    border-radius: 5px;
+
+    @include tablet-lg {
+      width: 190px;
+      height: 100px;
+      padding: 10px;
+    }
+
+    @include tablet {
+      width: 160px;
+      bottom: -20%;
+      height: 80px;
+      left: 45px;
+      padding: 8px;
+    }
+
+    @include mobile {
+      width: 120px;
+      height: 60px;
+      bottom: -15%;
+      left: 35px;
+      padding: 5px;
+      // top: 325px;
+    }
+
+    @include minmax-width(300, 400) {
+      // top: 37%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

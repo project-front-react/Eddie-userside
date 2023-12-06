@@ -1,0 +1,75 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.popup {
+  transition: 0.5s;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .popupBackground {
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popupSection {
+      transition: 0.5s;
+      background: white;
+      padding: 40px 80px;
+      border-radius: 10px;
+      position: relative;
+
+      @include mobile {
+        padding: 20px 60px;
+        margin: 10px;
+      }
+      .crossIcon {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+      }
+      .popupheading {
+        display: flex;
+        justify-content: center;
+      }
+      .popupcontent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .btn-green {
+          background-color: $btn-green;
+          color: $text-white;
+          min-width: 200px;
+          height: 54px;
+          line-height: 42px;
+          text-transform: uppercase;
+          &:hover {
+            background-color: #fff;
+            color: $btn-green;
+          }
+          @include tablet-lg {
+            font-size: 14px;
+            min-width: 120px;
+            height: 40px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h2 {
+    font-size: 18px !important;
+  }
+}

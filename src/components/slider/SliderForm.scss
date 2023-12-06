@@ -1,0 +1,64 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.slider-main {
+  width: 100%;
+  .slider-blcok {
+    text-align: center;
+    .imgStyle {
+      cursor: pointer;
+      @include max-width(835){
+        max-width: 340px ;
+      }
+    }
+  }
+  .slick-slide img {
+    display: block;
+    margin: 0 auto;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .title {
+    text-align: center;
+    color: $text-white;
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 18px;
+      font-family: $font300;
+      text-align: center !important;
+    }
+  }
+
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .slick-dots li button:before {
+    font-size: 15px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: "•";
+    text-align: center;
+    opacity: 0.25;
+    color: #000;
+  }
+  .slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: transparent;
+    border: 6px solid $bg-white;
+    border-radius: 20px;
+    margin-top: -2px;
+  }
+}

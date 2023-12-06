@@ -1,0 +1,242 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.CategoryDetails {
+  margin-top: 66px;
+  @include tablet-lg {
+    margin-top: 0px;
+  }
+  .banner-img {
+    height: 400px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    //margin-top: 76px;
+    @include tablet {
+      height: 200px;
+    }
+    @include mobile {
+      height: 200px;
+    }
+    @include flex-align(center);
+    .pagename {
+      h1 {
+        // font-family: $font600;
+        // color: $bg-black;
+        // margin-bottom: 0px;
+        font-family: $fontRegular;
+        color: $black-text-color;
+        margin-bottom: 0px;
+        @include tablet {
+          font-size: 22px;
+        }
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+      a {
+        font-family: $font600;
+        color: $bg-black;
+        text-decoration: none;
+        @include tablet {
+          font-size: 14px;
+        }
+        @include mobile {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .catoverview {
+    background-color: $bg-offwhite;
+    padding: 60px 0px;
+    padding-bottom: 10px;
+    @include mobile {
+      padding: 30px 0;
+    }
+    p {
+      color: $black-text-color;
+      font-family: $font300;
+      font-size: 18px;
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+    h2 {
+      color: $black-text-color;
+      font-size: 34px;
+      font-family: $font600;
+      @include mobile {
+        font-size: 28px;
+      }
+    }
+    h4 {
+      color: $black-text-color;
+      font-size: 24px;
+      font-family: $font300;
+      @include mobile {
+        font-size: 22px;
+      }
+    }
+    h5 {
+      color: $black-text-color;
+      font-size: 20px;
+      font-family: $font300;
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+    .ProcessSteps {
+      margin-top: 20px;
+      .steps-details {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        h4 {
+          color: $black-text-color;
+          font-size: 30px;
+          font-family: $font600;
+          min-height: 80px;
+          margin-top: 10px;
+          @include tablet {
+            min-height: unset;
+            font-size: 22px;
+          }
+        }
+        p {
+          font-size: 18px;
+          text-align: left;
+          @include mobile {
+            margin-bottom: unset;
+          }
+        }
+      }
+    }
+  }
+  // ul {
+  //   margin-top: 50px;
+  //   padding: 0px 100px;
+  //   @include tablet {
+  //     margin-top: 20px;
+  //     padding: 0 0;
+  //   }
+  //   li {
+  //     position: relative;
+  //     font-size: 18px;
+  //     font-family: $font300;
+  //     color: $black-text-color;
+  //     line-height: 21px;
+  //     width: 47%;
+  //     display: inline-flex;
+  //     padding: 0 2%;
+  //     padding-bottom: 30px;
+  //     &::before {
+  //       content: "";
+  //       position: absolute;
+  //       height: 10px;
+  //       width: 10px;
+  //       border-radius: 10px;
+  //       left: 0px;
+  //       top: 4px;
+  //       background-color: $text-green;
+  //     }
+  //     @include tablet {
+  //       width: 98%;
+  //       padding: 0 20px;
+  //       padding-bottom: 10px;
+  //     }
+  //   }
+  // }
+}
+
+.become-suppliers {
+  background-color: $bg-offwhite;
+  padding: 30px 0px;
+  h1 {
+    font-family: $font600;
+    color: $black-text-color;
+    font-size: 30px;
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+  p {
+  }
+  .abt-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    @include tablet-lg {
+      margin-top: 20px;
+      display: block;
+    }
+  }
+
+  .abt-image::before {
+    content: " ";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: $imgbg, $alpha: 0.5);
+    border-radius: 6px;
+    @include tablet-lg {
+      content: unset;
+    }
+  }
+
+  .abt-image img {
+    position: relative;
+    z-index: 1;
+    border-radius: 6px;
+  }
+}
+.btn {
+  border-radius: 10px;
+}
+.btn-green {
+  background-color: $btn-green;
+  color: $text-white;
+  // min-width: 200px;
+  height: 54px;
+  line-height: 42px;
+
+  &:hover {
+    background-color: #fff;
+    color: $btn-green;
+  }
+  @include tablet-lg {
+    font-size: 14px;
+    min-width: 120px;
+    height: 40px;
+    line-height: 28px;
+  }
+}
+.border-green-btn {
+  border: 1px solid $btn-green;
+  color: $btn-green;
+  background-color: transparent;
+}
+.newestcourse {
+  background-color: $bg-offwhite;
+  padding: 60px 0px;
+  @include tablet-lg {
+    overflow: hidden;
+  }
+  h1 {
+    font-family: $font600;
+    color: $black-text-color;
+    font-size: 30px;
+  }
+}
+.abt-form-section {
+  background-color: $light-gray;
+  padding: 60px 0px;
+  h1 {
+    font-family: $font600;
+    color: $black-text-color;
+    font-size: 30px;
+  }
+}

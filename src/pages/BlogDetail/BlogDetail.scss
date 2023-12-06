@@ -1,0 +1,191 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.BlogDetail {
+  margin-top: 66px;
+  @include tablet-lg {
+    margin-top: 0px;
+  }
+  .banner-img {
+    height: 400px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // margin-top: 76px;
+    @include tablet {
+      height: 200px;
+    }
+    @include mobile {
+      height: 200px;
+    }
+    @include flex-align(center);
+    .pagename {
+      h1 {
+        font-family: $font600;
+        color: $black-text-color;
+        margin-bottom: 0px;
+        @include tablet {
+          font-size: 22px;
+        }
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+      a {
+        font-family: $font600;
+        color: $black-text-color;
+        text-decoration: none;
+        @include tablet {
+          font-size: 14px;
+        }
+        @include mobile {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .howitwork {
+    background-color: $bg-offwhite;
+    padding-block: 60px;
+    @include mobile {
+      padding-block: 30px;
+    }
+    p {
+      color: $black-text-color;
+      font-family: $font300;
+      font-size: 16px;
+      text-align: left;
+      line-height: 20px;
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+    .blog-title {
+      color: $black-text-color;
+      font-size: 50px;
+      font-family: $font600;
+      text-align: left;
+      margin-bottom: 0;
+      @include tablet {
+        font-size: 22px;
+      }
+      @include mobile {
+        font-size: 22px;
+      }
+    }
+    .blog-author {
+      padding-bottom: 20px;
+      margin-top: 10px;
+      span {
+        font-size: 14px;
+        margin-right: 150px;
+        @include mobile {
+          margin-right: 15px;
+        }
+      }
+    }
+    h2 {
+      color: $black-text-color;
+      font-size: 30px;
+      font-family: $font600;
+      text-align: left;
+      @include mobile {
+        font-size: 22px;
+      }
+    }
+  }
+  .block-content {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    h2 {
+      text-align: left;
+      font-size: 30px;
+      font-family: $font600;
+    }
+    p {
+      font-size: 14px;
+      text-align: left;
+    }
+    .bottom-row {
+      margin-top: 20px;
+      @include flex-justify(space-between);
+    }
+    .blg-date {
+      color: $black-text-color;
+      font-family: $fontRegular;
+      font-size: 14px;
+    }
+    .link-green {
+      color: $green;
+      font-family: $fontRegular;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
+
+  .section-title {
+    @include justify-align(space-between, flex-start);
+    border-bottom: 1px solid #e8e7e7;
+    a {
+      color: $green;
+      font-family: $fontRegular;
+      font-size: 14px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+  }
+
+  .border-green-btn {
+    border: 1px solid $btn-green;
+    color: $btn-green;
+    background-color: transparent;
+  }
+  .newestcourse {
+    background-color: $bg-offwhite;
+    padding-block: 60px;
+    @include tablet-lg {
+      overflow: hidden;
+    }
+    h1 {
+      font-family: $font600;
+      color: $black-text-color;
+      font-size: 30px;
+    }
+  }
+  .abt-form-section {
+    background-color: $light-gray;
+    padding-block: 60px;
+    h1 {
+      font-family: $font600;
+      color: $black-text-color;
+      font-size: 30px;
+    }
+  }
+  .banner-box-big {
+    height: 270px;
+    object-fit: cover;
+    object-position: center center;
+    @include tablet-lg {
+      height: 350px;
+    }
+    @include tablet {
+      height: 270px;
+    }
+  }
+  .banner-box-big2 {
+    height: 500px;
+    object-fit: cover;
+    object-position: center center;
+    @include tablet-lg {
+      height: 350px;
+    }
+    @include tablet {
+      height: 250px;
+    }
+  }
+  .block-content-inner {
+    padding-block: 10px;
+    padding-inline: 10px;
+    padding-inline-start: 60px;
+  }
+}

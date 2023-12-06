@@ -1,0 +1,186 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.MyProfile {
+  margin-top: 66px;
+  @include tablet-lg {
+    margin-top: 0px;
+  }
+  .main-content {
+    min-height: 780px;
+    background-color: rgba($color: $bg-offwhite, $alpha: 0.8);
+    margin-left: 200px;
+    @include tablet-lg {
+      margin-left: 0;
+      padding-bottom: 58px;
+    }
+    .brdcumb-block {
+      @include flex-justify(space-between);
+    }
+    .brd-link {
+      color: $black-text-color;
+      text-decoration: none;
+      font-size: 18px;
+      @include tablet-lg {
+        font-size: 14px;
+      }
+    }
+    .text-green {
+      color: $text-green;
+      @include tablet-lg {
+        font-size: 14px;
+      }
+    }
+  }
+  .supplier-photo {
+    max-width: 215px;
+    max-height: 215px;
+    width: 215px;
+    height: 215px;
+    border-radius: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    @include tablet-lg {
+      max-width: 180px;
+      max-height: 180px;
+      width: 180px;
+      height: 180px;
+      margin-bottom: 20px;
+    }
+    @include tablet-lg {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    img {
+      object-fit: cover;
+      height: 215px;
+      @include tablet-lg {
+        height: 180px;
+      }
+    }
+  }
+  .supplier-details {
+    min-height: 760px;
+    @include mobile {
+      min-height: unset;
+    }
+    .supplier-title {
+      @include justify-align(space-between, center);
+      @include mobile {
+        flex-direction: column;
+      }
+      h1 {
+        font-size: 36px;
+        margin-bottom: 0px;
+        font-family: $font600;
+        @include mobile {
+          font-size: 22px;
+          display: block;
+          text-align: center;
+        }
+      }
+      h6 {
+        font-size: 14px;
+        font-family: $font300;
+      }
+    }
+    .btn-green {
+      background-color: $btn-green;
+      color: $text-white;
+      min-width: 150px;
+      height: 29px;
+      line-height: 18px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: "RundText-Light";
+      &:hover {
+        color: $btn-green;
+        background-color: $text-white;
+      }
+    }
+    .course-offered {
+      display: inline-flex;
+      padding: 15px 23px;
+      border-radius: 10px;
+      margin-top: 20px;
+      width: 100%;
+      align-items: center;
+      background-color: #F9F9F9;
+      @include mobile {
+        flex-direction: column;
+        align-items: unset;
+      }
+      h6 {
+        font-family: $font300;
+        color: $black-text-color;
+        font-size: 12px;
+        margin-right: 20px;
+        margin-bottom: 0;
+        width: 120px;
+        @include mobile {
+          margin-bottom: 10px;
+        }
+      }
+      .cat-list {
+        // overflow-x: auto;
+  
+        ul {
+          margin-bottom: 0px;
+          display: inline-flex;
+          @include mobile {
+            padding: 0;
+          }
+          li {
+            font-size: 18px;
+            color: $text-green;
+            list-style-type: none;
+            font-family: $fontRegular;
+            display: inline-flex;
+            margin-right: 20px;
+            min-width: 110px;
+            @include mobile {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .supplier-basic-information {
+      ul {
+        padding: 0px;
+        margin: 0;
+        margin-top: 30px;
+        li {
+          border-bottom: 1px solid #e3e3e3;
+          width: 100%;
+          list-style-type: none;
+          padding-block: 30px;
+          .infomation-row {
+            @include flex-align(center);
+            h6 {
+              font-size: 14px;
+              font-family: $font300;
+              margin-bottom: 0;
+            }
+            h5 {
+              font-size: 16px;
+              font-family: $fontRegular;
+              margin-bottom: 0;
+            }
+            .information-icon {
+              width: 40px;
+              margin-right: 20px;
+              text-align: center;
+            }
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+

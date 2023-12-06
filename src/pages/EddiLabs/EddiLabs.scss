@@ -1,0 +1,488 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.EddiLabsMain {
+  margin-top: 66px;
+
+  @include tablet-lg {
+    margin-top: 0px;
+  }
+
+  .main-content {
+    min-height: 780px;
+    background-color: rgba($color: $bg-offwhite, $alpha: 0.8);
+    margin-left: 200px;
+
+    @include tablet-lg {
+      margin-left: 0;
+      padding-bottom: 58px;
+    }
+
+    .brdcumb-block {
+      @include flex-justify(space-between);
+
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: 0.2px;
+        color: $bg-black;
+      }
+    }
+
+    .brd-link {
+      color: $black-text-color;
+      text-decoration: none;
+      font-size: 18px;
+
+      @include tablet-lg {
+        font-size: 14px;
+      }
+    }
+
+    .text-green {
+      color: $text-green;
+
+      @include tablet-lg {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .right-content {
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 0px;
+    min-height: 750px;
+
+    @include tablet-lg {
+      padding-left: 0px;
+    }
+  }
+
+  .course-details-main {
+    .course-banner {
+      background-color: $light-gray;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 94%;
+
+      .banner-box-big2 {
+        height: 428px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+
+        @include tablet-lg {
+          height: 350px;
+        }
+
+        @include tablet {
+          height: 250px;
+        }
+      }
+    }
+
+    .about-main-block {
+      background: $bg-white;
+      border-radius: 5px;
+      padding: 17px;
+
+      .desc {
+        font-weight: 300;
+        font-size: 16px;
+        color: $black-text-color;
+      }
+
+      .read-more-less {
+        color: $text-green;
+        text-align: end;
+      }
+    }
+
+    .course-content {
+      background-color: $bg-white;
+      border-radius: 5px;
+      padding: 30px;
+      @include tablet {
+        padding: unset;
+      }
+      @include mobile {
+        padding: 8px;
+      }
+      .accordion-button {
+        @include mobile {
+          flex-direction: column !important;
+          align-items: self-start;
+          padding: 10px !important;
+        }
+      }
+      .coming-div {
+        height: 250px;
+        width: 250px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+          margin-top: 12px;
+          font-weight: 800;
+          color: $text-green;
+        }
+      }
+      .ContentTitleWrap {
+        display: flex;
+        width: 80%;
+        @include mobile {
+          width: 100%;
+        }
+        .img-div {
+          width: 50px;
+          display: flex;
+          height: 50px;
+          text-align: center;
+          border-radius: 50%;
+          background: $bg-white;
+          padding: 19px;
+        }
+        .Title {
+          @include mobile {
+            margin: 0 !important;
+            margin-left: 10px !important;
+          }
+          h4 {
+            @include mobile {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      span {
+        @include mobile {
+          align-self: unset !important;
+          margin-bottom: -15px;
+          margin-top: 10px;
+          font-size: 12px;
+        }
+      }
+      .start-button {
+        background-color: $btn-green;
+        color: $bg-white;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 7px 28px;
+        border: 1px solid $btn-green;
+        min-width: 150px;
+
+        &:hover {
+          background-color: $bg-white;
+          color: $text-green;
+        }
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+
+      .accordion-item {
+        background-color: $light-gray;
+        border-radius: 5px;
+      }
+
+      .accordion-button {
+        background-color: $light-gray;
+      }
+
+      .accordition-start {
+        width: 80%;
+
+        .main-text {
+          color: $bg-black;
+          font-weight: 400;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .about-course {
+      margin-top: 30px;
+      border-radius: 10px;
+      background-color: $bg-white;
+      padding: 30px;
+
+      @include tablet {
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+        font-family: $fontRegular;
+        color: $black-text-color;
+
+        @include tablet {
+          font-size: 22px;
+        }
+
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+
+      p {
+        color: $black-text-color;
+        font-size: 18px;
+        font-family: $font300;
+        text-align: left;
+      }
+
+      .link-readmore {
+        color: #481a20;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .read-or-hide {
+        cursor: pointer;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+
+        @include mobile {
+          margin-bottom: 20px;
+        }
+
+        li {
+          font-size: 18px;
+          color: $black-text-color;
+          font-family: $font300;
+          position: relative;
+          padding-left: 15px;
+
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+
+        ::before {
+          position: absolute;
+          content: "";
+          width: 6px;
+          height: 6px;
+          background-color: $black-text-color;
+          border-radius: 6px;
+          left: 0px;
+          top: 10px;
+        }
+      }
+    }
+  }
+
+  .materials-block {
+    h3 {
+      font-size: 18px;
+      font-family: $font600;
+      margin-bottom: 0px;
+
+      @include tablet-lg {
+        margin-top: 20px;
+      }
+    }
+
+    p {
+      font-family: $font300;
+      font-size: 14px;
+    }
+
+    .material-list {
+      .max_height {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin-bottom: 15px;
+        max-height: 480px;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        .incomplete {
+          @include flex-align(center);
+          background-color: $bg-midgray;
+          display: flex;
+          align-items: center;
+        }
+
+        li {
+          width: 100%;
+          border-radius: 5px;
+          background-color: $bg-white;
+          padding: 15px;
+          margin-bottom: 20px;
+
+          .material-block {
+            position: relative;
+            align-items: center;
+            flex: 1;
+            @include flex-align(center);
+
+            .list-icons {
+              background-color: $bg-offwhite;
+              width: 70px;
+              height: 70px;
+              border-radius: 70px;
+              margin-right: 20px;
+              @include justify-align(center, center);
+
+              @include max-width(1225) {
+                width: 40px;
+                height: 40px;
+              }
+
+              img {
+                position: absolute;
+                height: 22px;
+
+                @include max-width(1225) {
+                  height: 12px;
+                }
+              }
+            }
+
+            .video_thumbnail {
+              width: 70px;
+              min-height: 70px;
+              max-height: 70px;
+              border-radius: 70px;
+              display: flex;
+              object-fit: cover;
+              justify-content: center;
+              align-items: center;
+
+              @include max-width(1225) {
+                min-height: 40px;
+                max-height: 40px;
+                width: 40px;
+              }
+            }
+
+            .title-block {
+              flex: 0.8;
+
+              h4 {
+                font-size: 18px;
+                font-family: $font300;
+                color: $black-text-color;
+                margin-bottom: 0;
+                word-break: break-all;
+
+                @include max-width(1225) {
+                  font-size: 14px;
+                }
+              }
+
+              h6.time {
+                font-size: 12px;
+                color: $black-text-color;
+                margin-top: 5px;
+                align-items: center;
+                display: flex;
+              }
+            }
+
+            .course-status {
+              position: absolute;
+              right: -6px;
+              font-size: 13px;
+              font-family: $font600;
+              bottom: -12px;
+
+              @include tablet {
+                font-size: 11px;
+              }
+            }
+
+            .completed {
+              color: $text-green;
+            }
+          }
+        }
+      }
+    }
+
+    h1 {
+      font-size: 30px;
+
+      @include tablet {
+        font-size: 22px;
+      }
+
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .btn {
+    border-radius: 10px;
+  }
+
+  .btn-green {
+    background-color: $btn-green;
+    color: #fff;
+    font-size: 18px;
+    height: 54px;
+    line-height: 40px;
+    min-width: 150px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $bg-white;
+      color: $text-green;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .popupinfo {
+    width: 100%;
+    margin-top: 20px;
+
+    p {
+      font-family: $fontRegular;
+    }
+
+    .zoom-form {
+      input {
+        width: 100%;
+        margin-top: 10px;
+        border: 1px solid $bg-green;
+        background-color: $bg-offwhite;
+        border-radius: 5px;
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .popupSection {
+    max-width: 615px;
+    padding: 20px !important;
+    width: 90%;
+    margin: 0 1%;
+
+    .popupcontent {
+      align-items: flex-start !important;
+    }
+  }
+}

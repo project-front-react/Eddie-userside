@@ -1,0 +1,199 @@
+@import "../../../common/styles/variables.scss";
+@import "../../../common/styles/mixins.scss";
+body {
+  padding-top: 0px;
+}
+.login-main {
+  min-height: 100vh;
+  // min-width: 100vw;
+  display: flex;
+  @media (max-width: 991px) {
+    margin-top: -64px !important;
+  }
+  @include tablet {
+    flex-direction: column-reverse;
+  }
+  background: rgba(118, 145, 140, 0.8);
+  .login-slider {
+    width:50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    @include tablet {
+      width: calc(100%);
+      padding: 20px;
+      padding-bottom: 40px;
+      display: none;
+    }
+  }
+  .login-form {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $light-gray;
+    flex-direction: column;
+    padding-top: 22vh;
+    @include tablet {
+      padding-top: 40px;
+      min-height: 100vh;
+      width: calc(100%);
+    }
+    .langauge-dd {
+      display: flex;
+      position: absolute;
+      top: 1%;
+      right: 25px;
+      select {
+        background-color: #fff;
+        color: #3e8181;
+        height: 44px;
+        line-height: 42px;
+        border-radius: 10px;
+        text-transform: uppercase;
+        border-color: #3e8181;
+        padding: 0 15px;
+        margin-left: 10px;
+        -webkit-appearance: none;
+        appearance: none;
+        -moz-appearance: none;
+        background: url(../../../assets/images/header-dd-arrow.svg) no-repeat;
+        background-position: right 12px center;
+        padding-right: 30px;
+
+        @include tablet-lg {
+          font-size: 14px;
+          height: 40px;
+          line-height: 28px;
+          position: unset;
+        }
+        @include mobile {
+          font-size: 12px;
+        }
+        &:focus-visible {
+          outline: none;
+        }
+      }
+    }
+    h4 {
+      font-size: 50px;
+      font-family: $font600;
+      color: $black-text-color;
+      @include tablet {
+        padding: 0 5px;
+      }
+    }
+    .social-login {
+      display: flex;
+      @include tablet {
+        text-align: center;
+      }
+      button {
+        margin-right: 0px;
+        border: none;
+        outline: none;
+        img {
+          width: 70%;
+        }
+      }
+    }
+    h5 {
+      font-size: 25px;
+      font-family: $fontRegular;
+      color: $black-text-color;
+      @include tablet {
+        font-size: 22px;
+        text-align: center;
+      }
+    }
+    label {
+      font-family: $fontRegular;
+    }
+    .fill-icon {
+      padding-right: 40px;
+    }
+    .filled-icon {
+      position: absolute;
+      right: 10px;
+      bottom: 15px;
+    }
+    .form-control {
+      height: 52px;
+    }
+    .btn {
+      height: 52px;
+      border-radius: 5px;
+    }
+    .errorText {
+      color: $google-color;
+      font-size: $super-small-font;
+      // position: absolute;
+      margin-top: 5px;
+    }
+  }
+  .main-form-block {
+    width: 465px;
+    max-width: 100%;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-top: 15px;
+    }
+    .btn-green {
+      background-color: $btn-green;
+      color: #fff;
+    }
+  }
+  .link-green {
+    color: $green;
+    font-family: $font300;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .font18 {
+    color: $black-text-color;
+    font-family: $font300;
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
+.langauge-d-sec {
+  display: flex;
+  justify-content: center;
+}
+.langauge-d-sec .langauge-dd {
+  margin-left: 0;
+}
+.langauge-d-sec img {
+  cursor: pointer;
+  margin-left: 5px;
+}
+.langauge-d-sec ul {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  color: #212529;
+  display: none;
+  font-size: 1rem;
+  list-style: none;
+  margin: 0;
+  min-width: 2rem;
+  padding: 0.5rem 0;
+  text-align: left;
+  cursor: pointer;
+}
+.text-start-login {
+  display: flex;
+  justify-content: center;
+}
+.dropdown:hover ul {
+  display: block !important;
+}

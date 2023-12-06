@@ -1,0 +1,136 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.blog-course-main {
+  padding: 0;
+}
+.course-main {
+  width: 100%;
+  .banner-box {
+    height: 157px;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .course-box {
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+    .crs-lab {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      padding: 0 10px;
+      border-radius: 5px;
+      color: #fff;
+      font-family: $font300;
+      font-size: 10px;
+      height: 23px;
+      align-items: center;
+      display: flex;
+    }
+  }
+  .course-details {
+    border: unset;
+    padding: 10px 15px;
+    background-color: $bg-white;
+    h4 {
+      font-size: 18px;
+      font-family: $font600;
+      margin-bottom: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    h6 {
+      font-family: $fontRegular;
+      font-size: 10px;
+    }
+    p {
+      font-family: $font300;
+      font-size: 14px !important;
+    }
+    .btn-green {
+      height: 38px;
+      border-radius: 10px;
+      line-height: 26px;
+      text-transform: uppercase;
+    }
+    .course-description {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .slider-blcok {
+    text-align: center;
+  }
+  .slick-slide img {
+    display: block;
+    margin: 0 auto;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .slick-next:before,
+  .slick-prev:before {
+    font-size: 30px;
+    line-height: 1;
+    opacity: 1;
+    color: $black-text-color;
+    @include mobile {
+      display: none;
+    }
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev {
+    left: 0;
+  }
+
+  .section-title {
+    @include justify-align(space-between, center);
+    h1 {
+      width: 80%;
+      font-size: 32px;
+      font-family: $font600;
+      color: $black-text-color;
+      @include mobile{
+        font-size: 22px;
+      }
+    }
+    .link-green {
+      color: $green;
+      font-family: $fontRegular;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
+  // .slick-slide {
+  //   margin: 0 -15px;
+  // }
+
+  /* the parent */
+  .slick-list {
+    margin: 0 -15px;
+    @include mobile {
+      margin: 0 -10px;
+    }
+  }
+  .bottom-row {
+    margin-top: 20px;
+    @include flex-justify(space-between);
+  }
+  .blg-date {
+    color: $black-text-color;
+    font-family: $fontRegular;
+    font-size: 14px;
+  }
+  .link-green {
+    color: $green;
+    font-family: $fontRegular;
+    font-size: 14px;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.Sidebar-main {
+  min-width: 200px;
+  height: calc(100% - 64px - 93px);
+  background-color: #fff;
+  padding-top: 50px;
+  flex: 1;
+  position: absolute;
+  left: 0;
+  @include tablet-lg {
+    position: fixed;
+    z-index: 99999999;
+    min-height: unset;
+    height: unset;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding-top: 0px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    @include tablet-lg {
+      @include flex-justify(space-between);
+    }
+    li {
+      .link-icon {
+        width: 30px;
+        @include tablet-lg {
+          img {
+            height: 26px;
+          }
+        }
+      }
+      a {
+        padding-left: 30px;
+        padding-block: 10px;
+        text-decoration: none;
+        color: $green;
+        border-left: 3px solid transparent;
+        @include tablet-lg {
+          border-left: none;
+        }
+        @include flex-align(center);
+        &:hover {
+          background-color: rgba($color: $bg-offwhite, $alpha: 0.8);
+          border-left: 3px solid #3e8181;
+          @include tablet-lg {
+            border-left: none;
+          }
+        }
+        @include tablet-lg {
+          padding-left: 15px;
+          color: #3e8181;
+          padding-right: 15px;
+          font-size: 0px;
+          text-align: center;
+        }
+      }
+      .active {
+        background-color: rgba($color: $bg-offwhite, $alpha: 0.8);
+        border-left: 3px solid #3e8181;
+        @include tablet-lg {
+          border-left: none;
+        }
+      }
+    }
+  }
+}

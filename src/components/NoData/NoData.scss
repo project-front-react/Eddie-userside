@@ -1,0 +1,18 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.no-data {
+  span {
+    font-size: 18px !important;
+    font-family: $font600 !important;
+    color: $black-text-color !important;
+    @media screen and (max-width: 320px) {
+      margin-bottom: 20px;
+    }
+  }
+  .no-data-img {
+    @media screen and (max-width: 320px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,280 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.MyProfile {
+  margin-top: 66px;
+  @include tablet-lg {
+    margin-top: 0px;
+  }
+  .main-content {
+    min-height: 780px;
+    background-color: rgba($color: $bg-offwhite, $alpha: 0.8);
+    margin-left: 200px;
+    @include tablet-lg {
+      margin-left: 0;
+      padding-bottom: 58px;
+    }
+    .brdcumb-block {
+      @include flex-justify(space-between);
+    }
+    .brd-link {
+      color: $black-text-color;
+      text-decoration: none;
+      font-size: 18px;
+      @include tablet-lg {
+        font-size: 14px;
+      }
+    }
+    .text-green {
+      color: $text-green;
+      @include tablet-lg {
+        font-size: 14px;
+      }
+    }
+    .edit-form {
+      @media screen and (max-width: 768px) {
+        --bs-gutter-x: unset;
+      }
+    }
+  }
+  .supplier-photo {
+    background-color: #e3e3e3;
+    max-width: 215px;
+    max-height: 215px;
+    width: 215px;
+    height: 215px;
+    border-radius: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    @include laptop {
+      max-width: 180px;
+      max-height: 180px;
+      width: 180px;
+      height: 180px;
+      margin-bottom: 20px;
+    }
+    @include tablet-lg {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    img {
+      object-fit: cover;
+    }
+  }
+  .profile-form-details {
+    min-height: 760px;
+    @include mobile {
+      min-height: unset;
+    }
+    .supplier-title {
+      @include justify-align(space-between, center);
+      @include mobile {
+        flex-direction: column;
+      }
+      h1 {
+        font-size: 36px;
+        margin-bottom: 0px;
+        font-family: $font600;
+        @include mobile {
+          font-size: 22px;
+          display: block;
+          text-align: center;
+        }
+      }
+      h6 {
+        font-size: 14px;
+        font-family: $font300;
+      }
+    }
+
+    .btn-green {
+      background-color: $btn-green;
+      color: $text-white;
+      min-width: 150px;
+      height: 39px;
+      line-height: 28px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: "RundText-Light";
+      &:hover {
+        color: $btn-green;
+        background-color: $text-white;
+      }
+    }
+    .course-offered {
+      display: inline-flex;
+      padding-block: 23px;
+      padding-inline: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      width: 100%;
+      align-items: center;
+      background-color: #f9f9f9;
+      @include mobile {
+        flex-direction: column;
+        align-items: unset;
+      }
+      h6 {
+        font-family: $font300;
+        color: $black-text-color;
+        font-size: 12px;
+        margin-right: 20px;
+        margin-bottom: 0;
+        width: 120px;
+        @include mobile {
+          margin-bottom: 10px;
+        }
+      }
+      .cat-list {
+        // overflow-x: auto;
+
+        ul {
+          margin-bottom: 0px;
+          display: inline-flex;
+          @include mobile {
+            padding: 0;
+          }
+          li {
+            font-size: 18px;
+            color: $text-green;
+            list-style-type: none;
+            font-family: $fontRegular;
+            display: inline-flex;
+            margin-right: 20px;
+            min-width: 110px;
+            @include mobile {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .supplier-basic-information {
+      ul {
+        padding: 0px;
+        margin: 0;
+        margin-top: 30px;
+        li {
+          border-bottom: 1px solid #e3e3e3;
+          width: 100%;
+          list-style-type: none;
+          padding-block: 30px;
+          .infomation-row {
+            @include flex-align(center);
+            h6 {
+              font-size: 14px;
+              font-family: $font300;
+              margin-bottom: 0;
+            }
+            h5 {
+              font-size: 16px;
+              font-family: $fontRegular;
+              margin-bottom: 0;
+            }
+            .information-icon {
+              width: 40px;
+              margin-right: 20px;
+            }
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+  .form-control {
+    margin-top: 5px;
+    border-radius: 10px;
+    border: none;
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .image-upload > input {
+    display: none;
+  }
+  .supplier-main {
+    position: relative;
+    max-width: 215px;
+    max-height: 215px;
+    width: 215px;
+    height: 215px;
+    @include laptop {
+      max-width: 180px;
+      max-height: 180px;
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
+    }
+    h4 {
+      font-family: $fontRegular;
+      font-size: 16px;
+      margin-top: 20px;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+  .image-upload {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    label {
+      cursor: pointer;
+    }
+  }
+
+  .selectbox-main .PhoneInput {
+    border: none;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+}
+.selectbox-main {
+  margin-bottom: 20px;
+  .PhoneInput {
+    display: flex;
+    align-items: center;
+    background: white;
+    height: 50px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    padding: 0 10px;
+
+    background-color: #fff;
+
+    border: 1px solid #ced4da;
+  }
+  .PhoneInputInput {
+    border: none;
+  }
+  .PhoneInputInput.PhoneInput--focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  input {
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+.errorText {
+  color: $google-color;
+  font-size: $super-small-font;
+  // position: absolute;
+  margin-top: 5px;
+  margin-bottom: 0px !important;
+}
+.supplier-photo {
+  #file-input {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../common/styles/variables.scss";
+
+
+.sidePopup {
+    position: absolute;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100%;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+
+    .transparantSection{
+        flex: 1;
+        background: rgba(0,0,0,0.5);
+    }
+    .popupSection{
+        background: #ffffff;
+        max-height: 100vh;
+        overflow-y: scroll;
+
+        .popupHeader{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid $black-text-color;
+        }
+        .popupContent{
+            padding: 10px 20px;
+        }
+    }
+}

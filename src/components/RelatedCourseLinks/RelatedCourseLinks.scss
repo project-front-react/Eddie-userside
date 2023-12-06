@@ -1,0 +1,45 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+.related-course {
+  background-color: $bg-white;
+  padding: 15px;
+  margin-top: 58px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  @include tablet-lg {
+    margin-top: 0;
+  }
+
+  h3 {
+    font-family: $fontRegular;
+    font-size: 18px;
+    color: $black-text-color;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    li {
+      margin-bottom: 5px;
+      padding-left: 15px;
+      position: relative;
+      line-height: 30px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background-color: $text-green;
+        border-radius: 5px;
+        top: 13px;
+        left: 0px;
+      }
+      a {
+        color: $text-green;
+        font-size: 14px;
+        font-family: $font300;
+        text-decoration: none;
+      }
+    }
+  }
+}

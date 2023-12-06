@@ -1,0 +1,45 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+body {
+  padding-top: 0px;
+}
+.PageNoNet {
+  min-height: 100vh;
+  background-color: $bg-offwhite;
+  @include tablet-lg {
+    margin-top: 0px;
+  }
+  .page404-blcok {
+    min-height: calc(100vh - 285px - 66px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1 {
+    color: $text-green;
+    font-size: 40px;
+  }
+  p {
+    font-family: $fontRegular;
+    margin: 0px;
+  }
+  .btn-green {
+    background-color: $bg-white;
+    border: 1px solid $text-green;
+    text-transform: uppercase;
+    color: $text-green;
+    font-family: $font600;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+  @include mobile {
+    .page404-blcok {
+      img {
+        width: 120px;
+      }
+    }
+  }
+}

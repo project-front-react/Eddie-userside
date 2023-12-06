@@ -1,0 +1,168 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.course-main {
+  width: 100%;
+  .banner-box {
+    height: 157px;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .course-box {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px #00000025;
+    margin-top: 20px;
+    .crs-lab {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      padding: 0 10px;
+      border-radius: 5px;
+      color: #fff;
+      font-family: $font300;
+      font-size: 10px;
+      height: 23px;
+      align-items: center;
+      display: flex;
+    }
+    .crs-sug {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      padding: 0 10px;
+      border-radius: 0px 0px 10px;
+      color: #fff;
+      font-family: $font300;
+      font-size: 10px;
+      height: 23px;
+      align-items: center;
+      display: flex;
+      background: $btn-green;
+    }
+    .course-box-hover {
+      display: none;
+    }
+    &:hover {
+      .course-box-hover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #00000090;
+        z-index: 9;
+        left: 0px;
+        top: 0px;
+        padding: 10px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h1 {
+          color: $text-white;
+          font-size: 28px;
+          word-wrap: break-word;
+        }
+        .overlay-information {
+          color: $text-white;
+          font-size: 16px;
+          font-family: $font300;
+        }
+        .btn-green {
+          height: 38px;
+          border-radius: 10px;
+          line-height: 26px;
+          text-transform: none !important;
+          color: $text-green;
+          background-color: $text-white;
+        }
+      }
+    }
+  }
+  .course-details {
+    border: 1px solid #f4f4f4;
+    padding: 10px;
+    max-height: 191px;
+    h4 {
+      font-size: 18px;
+      font-family: $font600;
+      margin-bottom: 0;
+    }
+    h6 {
+      font-family: $fontRegular;
+      font-size: 10px;
+    }
+    .additional {
+      min-height: 90px;
+      max-height: 90px;
+      p {
+        font-family: $font300;
+        font-size: 14px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 20px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .btn-green {
+      height: 38px;
+      border-radius: 10px;
+      line-height: 26px;
+      background-color: $bg-green;
+      color: $text-white;
+      // min-width: 200px;
+      text-transform: none !important;
+    }
+  }
+  .slider-blcok {
+    text-align: center;
+  }
+  .slick-slide img {
+    display: block;
+    margin: 0 auto;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .slick-next:before,
+  .slick-prev:before {
+    font-size: 30px;
+    line-height: 1;
+    opacity: 1;
+    color: $black-text-color;
+    @include mobile {
+      display: none;
+    }
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev {
+    left: 0;
+  }
+
+  .section-title {
+    @include justify-align(space-between, center);
+    .link-green {
+      color: $green;
+      font-family: $fontRegular;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    h2 {
+      span {
+        color: red;
+      }
+    }
+  }
+  // .slick-slide {
+  //   margin: 0 -15px;
+  // }
+
+  /* the parent */
+  .slick-list {
+    margin: 0 -15px;
+  }
+}

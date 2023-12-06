@@ -1,0 +1,10 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixins.scss";
+
+.textArea-main {
+  margin-bottom: 20px;
+  .form-control {
+    min-height: 112px;
+    resize: none;
+  }
+}
